@@ -8,10 +8,10 @@ Script 1: create-phoneclient phonenumber
 * Users should have the ability to read and delete but not create files or folders.
 
 Script 2: delete-phoneclient phonenumber
-Deletes a user, if there is data in the folder warn and prompt before deleting
+* Deletes a user, if there is data in the folder warn and prompt before deleting
 
 Script 3: detect-nonpdftiff files
-Recursively goes through user folders and shows all files that are not .tiff or .pdf
+* Recursively goes through user folders and shows all files that are not .tiff or .pdf
 
 Script 4: audit-permissions
-Recursively checks permissions on all user folders and displays any inconsistencies when run. Ideally, folder should have 755 and files should have 644 permissions.
+* Recursively checks permissions on all user folders and displays any inconsistencies when run. Ideally, folder should have 755 and files should have 644 permissions.
