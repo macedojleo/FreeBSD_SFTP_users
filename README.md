@@ -16,7 +16,7 @@ Script 2: delete-phoneclient
 
 ``` $ delete-phoneclient <phonenumber> ```
 
-* Deletes a user, if there is data in the folder warn and prompt before deleting
+* Deletes a user. Warn and prompt before deleting
 
 Script 3: detect-nonpdftiff
 
@@ -28,9 +28,7 @@ Script 4: audit-permissions
 
 ``` $ audit-permissions <Optional phonenumber>```
 
-* Recursively checks permissions on all user folders and displays any inconsistencies when run. Ideally, folder should have 755 and files should have 644 permissions.
-
-
+* Recursively checks permissions on all user folders and displays any inconsistencies when run.
 
 ### Setting up the environment
 
