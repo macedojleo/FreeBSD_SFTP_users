@@ -1,4 +1,4 @@
-### SCRIPTS
+### Scripts
 
 Script 1: create-phoneclient
 
@@ -29,6 +29,8 @@ Script 4: audit-permissions
 ``` $ audit-permissions <Optional phonenumber>```
 
 * Recursively checks permissions on all user folders and displays any inconsistencies when run. Ideally, folder should have 755 and files should have 644 permissions.
+
+
 
 ### Setting up the environment
 
