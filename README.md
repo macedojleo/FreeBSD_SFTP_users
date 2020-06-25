@@ -27,3 +27,29 @@ Script 4: audit-permissions
 ``` $ audit-permissions <Optional phonenumber>```
 
 * Recursively checks permissions on all user folders and displays any inconsistencies when run. Ideally, folder should have 755 and files should have 644 permissions.
+
+- Installing
+
+1. Create a group called "sftp-only".
+  
+ Run the following command as root or an equivalent user.
+
+ ``` $ pw groupadd sftp-only ```
+
+2. Setup sftp-server subsystem in sshd_config file
+
+* Comment out the following line on /etc/ssh/sshd_config file.
+
+   #Subsystem      sftp    /usr/libexec/sftp-server
+
+* Add the following lines on /etc/ssh/sshd_config file.
+
+     Subsystem sftp internal-sftp
+       Match group sftp-only
+       ChrootDirectory /home/%u
+       ForceCommand internal-sftp
+       AuthorizedKeysFile <put here the authorized_keys path e.g /home/vagrant/.ssh/authorized_keys>
+
+* Restart the SSHD process
+
+  ``` $ service sshd restart ```
