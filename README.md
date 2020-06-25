@@ -1,3 +1,5 @@
+### SCRIPTS
+
 Script 1: create-phoneclient
 
 ``` $ create-phoneclient <phonenumber> ```
@@ -28,7 +30,7 @@ Script 4: audit-permissions
 
 * Recursively checks permissions on all user folders and displays any inconsistencies when run. Ideally, folder should have 755 and files should have 644 permissions.
 
-- Installing
+### Setting up the environment
 
 1. Create a group called "sftp-only".
   
@@ -50,6 +52,6 @@ Script 4: audit-permissions
        ForceCommand internal-sftp
        AuthorizedKeysFile <put here the authorized_keys path e.g /home/vagrant/.ssh/authorized_keys>
 
-* Restart the SSHD process
+3. Restart the SSHD process
 
   ``` $ service sshd restart ```
