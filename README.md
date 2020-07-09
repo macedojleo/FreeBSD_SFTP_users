@@ -2,7 +2,7 @@
 
 Script 1: create-phoneclient
 
-``` $ create-phoneclient <phonenumber> ```
+``` $ create-phoneclient.sh <phonenumber> ```
 
 * Creates a user on the system based on the 10 or 11 digit phone number provided, prompts for password. 
 * Passwords should be at a minimum 16 random characters long.
@@ -14,21 +14,27 @@ Script 1: create-phoneclient
 
 Script 2: delete-phoneclient
 
-``` $ delete-phoneclient <phonenumber> ```
+``` $ delete-phoneclient.sh <phonenumber> ```
 
 * Deletes a user. Warn and prompt before deleting
 
 Script 3: detect-nonpdftiff
 
-``` $ detect-nonpdftiff <Optional phonenumber>```
+``` $ detect-nonpdftiff.sh <Optional phonenumber>```
 
 * Recursively goes through user folders and shows all files that are not .tiff or .pdf
 
 Script 4: audit-permissions
 
-``` $ audit-permissions <Optional phonenumber>```
+``` $ audit-permissions.sh <Optional phonenumber>```
 
 * Recursively checks permissions on all user folders and displays any inconsistencies when run.
+
+Script 5: scp_files
+
+``` $ scp_files.sh ```
+
+* Batch job to fetch .pdf and .tiff files from remote server to the respective input and output folders structure on local server. 
 
 ### Setting up the environment
 
