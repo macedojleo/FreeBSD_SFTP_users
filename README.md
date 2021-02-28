@@ -4,9 +4,9 @@ Script 1: create-phoneclient
 
 ``` $ create-phoneclient.sh <phonenumber> ```
 
-* Creates a user on the system based on the 10 or 11 digit phone number provided, prompts for password. 
-* Passwords should be at a minimum 16 random characters long.
-* Home directory for the user should be /home/$USERNAME/.
+* It will create an user based on 10 or 11 digit phone number and prompt for password. 
+* The passwords should be at a minimum 16 random characters long.
+* The home dir should be /home/$USERNAME/.
 * Upon user creation there should be 2 additional directory also be created within user's home directory: "incoming" and "outgoing".
 * Users that log in should not be able to see any details of other users and should be chrooted to their own folders.
 * SSH login should be disabled, users should only be able to do scp. (No Shell).
@@ -16,41 +16,41 @@ Script 2: delete-phoneclient
 
 ``` $ delete-phoneclient.sh <phonenumber> ```
 
-* Deletes a user. Warn and prompt before deleting
+* It will delete the user. Warn and prompt before deleting
 
 Script 3: detect-nonpdftiff
 
 ``` $ detect-nonpdftiff.sh <Optional phonenumber>```
 
-* Recursively goes through user folders and shows all files that are not .tiff or .pdf
+* Recursively goes through user folders and list all files aren`t .tiff or .pdf 
 
 Script 4: audit-permissions
 
 ``` $ audit-permissions.sh <Optional phonenumber>```
 
-* Recursively checks permissions on all user folders and displays any inconsistencies when run.
+* Recursively check all users folders permissions and display any inconsistencies.
 
 Script 5: scp_files
 
 ``` $ scp_files.sh ```
 
-* Batch job to fetch .pdf and .tiff files from remote server to the respective input and output folders structure on local server. 
+* Fetch all .pdf and .tiff files from remote server to the respective input and output folders into the local server. 
 
 ### Setting up the environment
 
-1. Create a group called "sftp-only".
+1. Create "sftp-only" group.
   
- Run the following command as root or an equivalent user.
+Run as root or equivalent provilege.
 
  ``` $ pw groupadd sftp-only ```
 
-2. Setup sftp-server subsystem in sshd_config file
+2. Configure the sftp-server subsystem.
 
-* Comment out the following line on /etc/ssh/sshd_config file.
+* Comment this line in /etc/ssh/sshd_config file.
 
    #Subsystem      sftp    /usr/libexec/sftp-server
 
-* Add the following lines on /etc/ssh/sshd_config file.
+* Add these lines in the same file.
 
      Subsystem sftp internal-sftp
        Match group sftp-only
