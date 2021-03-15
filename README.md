@@ -42,13 +42,13 @@ Script 1: create-phoneclient
   
 Run as root or equivalent privileges.
 
- ``` $ pw groupadd sftp-only ```
+ ``` # pw groupadd sftp-only ```
 
 #### 2. Configure the sftp-server subsystem.
 
 Edit the file **/etc/ssh/sshd_config**:
 
-``` vi /etc/ssh/sshd_config ```
+``` $ vi /etc/ssh/sshd_config ```
 
 * Comment that line:
 ```
