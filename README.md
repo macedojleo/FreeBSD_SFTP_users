@@ -51,8 +51,9 @@ Edit the file **/etc/ssh/sshd_config**:
 ``` vi /etc/ssh/sshd_config ```
 
 * Comment that line:
-
+```
    *#Subsystem      sftp    /usr/libexec/sftp-server*
+```
 
 * Add those lines.
 
