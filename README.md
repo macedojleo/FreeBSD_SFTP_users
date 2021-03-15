@@ -56,11 +56,14 @@ Edit the file **/etc/ssh/sshd_config**:
 
 * Add those lines.
 
+
+```
      *Subsystem sftp internal-sftp*
        *Match group sftp-only*
        *ChrootDirectory /home/%u*
        *ForceCommand internal-sftp*
        *AuthorizedKeysFile <put here the authorized_keys path e.g /home/vagrant/.ssh/authorized_keys>*
+```
 
 #### 3. Restart SSHD process
 
